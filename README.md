@@ -175,7 +175,8 @@ curl http://192.168.3.1:9200
  ### docker installation 
  
 **Why?**
-*Docker is an open-source containerization platform used to package applications and their dependencies into portable containers. In ELK Stack and Cortex deployments, Docker streamlines installation, simplifies service management, improves portability, and enables consistent, scalable, and reliable security infrastructure deployment.*
+
+- *Docker is an open-source containerization platform used to package applications and their dependencies into portable containers. In ELK Stack and Cortex deployments, Docker streamlines installation, simplifies service management, improves portability, and enables consistent, scalable, and reliable security infrastructure deployment.*
 
 **One Click Docker Installing Commands**
 
@@ -250,14 +251,14 @@ http://192.168.3.4:9001/.
 
 - And update an dashboard 
 
-Loging : admin
-User name : admin
-Password : admin
+- Loging : admin
+- User name : admin
+- Password : admin
 
 - Cortex manually setup complete 
 
-Thank you for Trying
-Welcome the next Part
+**Thank you for Trying**
+**Welcome the next Part**
 
 
 
