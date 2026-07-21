@@ -87,8 +87,8 @@ echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://arti
 ```
 sudo nano /etc/elasticsearch/elasticsearch.yml
 ```
-- network.host: 0.0.0.0
-- discovery.type: single-node
+- network.host: **0.0.0.0**
+- discovery.type: **single-node**
 
 
 ### Configuration and create a file 
@@ -107,9 +107,11 @@ sudo nano /etc/elasticsearch/jvm.options.d/jvm.options
 ---
 
 #### Open file path and modify 
-```sudo nano /etc/elasticsearch/elasticsearch.yml```
+```
+sudo nano /etc/elasticsearch/elasticsearch.yml
+```
 
-## UnCommend/Delete in tihs (Hash-#) Path
+## Uncommend/Delete in tihs (Hash-#) Path
 
 *This list is commented, with #, you need to uncomment it and put your own IP and fix the port.*
 
