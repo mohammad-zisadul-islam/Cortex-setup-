@@ -134,8 +134,7 @@ thread_pool.search.queue_size: 100000
 ### Cortex enable,start and status all is ok 
 ```
 sudo systemctl enable elasticsearch.service
-```
-```
+
 sudo systemctl start elasticsearch.service
 ```
 ```
