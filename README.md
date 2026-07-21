@@ -162,6 +162,8 @@ sudo systemctl restart elasticsearch
 }
 ```
 
+---
+
 ## Verify installation Chack status 
 ```
 curl -k -u elastic:192.168.4.5 https://localhost:9200
@@ -172,11 +174,14 @@ curl http://192.168.3.1:9200
 
 ```
 
+---
  ### docker installation 
  
 **Why?**
 
 - *Docker is an open-source containerization platform used to package applications and their dependencies into portable containers. In ELK Stack and Cortex deployments, Docker streamlines installation, simplifies service management, improves portability, and enables consistent, scalable, and reliable security infrastructure deployment.*
+
+---
 
 **One Click Docker Installing Commands**
 
@@ -209,6 +214,8 @@ cortex --version
 ```
 cat > /etc/cortex/secret.conf << _EOF_ play.http.secret.key="$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1)" _EOF
 ```
+
+---
 #### Verify 
 
  ```
@@ -227,6 +234,9 @@ sudo nano /etc/cortex/application.conf
 - sure to use the same key.
 - play.http.secret.keany="***CHANGEME***"
 - include "/etc/cortex/secret.conf"
+
+
+---
 
 ## ElasticSearch
 ```
