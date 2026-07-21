@@ -250,15 +250,15 @@ sudo systemctl status cortex
 http://192.168.3.4:9001/.
 
 - And update an dashboard 
-
+```
 - Loging : admin
 - User name : admin
 - Password : admin
-
+```
 - Cortex manually setup complete 
 
-**Thank you for Trying**
-**Welcome the next Part**
+#### **Thank you for Trying**
+#### **Welcome the next Part**
 
 
 
