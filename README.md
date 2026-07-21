@@ -172,6 +172,124 @@ curl http://192.168.3.1:9200
 
 ```
 
+ ### docker installation 
+ 
+**Why?**
+*Docker is an open-source containerization platform used to package applications and their dependencies into portable containers. In ELK Stack and Cortex deployments, Docker streamlines installation, simplifies service management, improves portability, and enables consistent, scalable, and reliable security infrastructure deployment.*
+
+**One Click Docker Installing Commands**
+
+```
+. /etc/os-release curl -fsSL https://download.docker.com/linux/${ID}/gpg | sudo gpg --dearmor -o /usr/share/keyrings/dockerarchive-keyring.gpg echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/${ID} ${VERSION_CODENAME:-$UBUNTU_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/docker.list sudo apt update sudo apt install docker-ce
+```
+
+
+## Cortex installation and configuration
+
+**Download DEB Package**
+```
+wget -O /tmp/cortex_4.0.0-1_all.deb https://cortex.download.strangebee.com/4.0/deb/cortex_4.0.0-1_all.deb 
+sudo apt-get install /tmp/cortex_4.0.0-1_all.deb 
+sudo dpkg -i /tmp/cortex_4.0.0-1_all.deb
+```
+
+### Post Installation
+ **Running analyzers & responders with Docker# If you plan to use Cortex with Analyzers & Responders running in Docker, ensure the cortex service account has appropriate permissions to interact with Docker**
+```
+sudo usermod -aG docker cortex 
+```
+
+**Chack cortex version**
+```
+cortex --version
+```
+
+**Setup a secret key for this instance**
+```
+cat > /etc/cortex/secret.conf << _EOF_ play.http.secret.key="$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1)" _EOF
+```
+#### Verify 
+
+ ```
+ sudo cat /etc/cortex/secret.conf
+```
+*play.http.secret.key="IVoulN4w05vu1ukei5j86ySeVOqoxZzRCBIE0NIxNMX2WoqEgzXG4PQLTbCvIysx"*
+
+
+### Modify the folder  
+``` 
+sudo nano /etc/cortex/application.conf
+```
+**add by line**
+
+- IMPORTANT: If you deploy your application to several  instances,  make
+- sure to use the same key.
+- play.http.secret.keany="***CHANGEME***"
+- include "/etc/cortex/secret.conf"
+
+## ElasticSearch
+```
+search {
+  # Name of the index
+  index = cortex
+  # ElasticSearch instance address.
+  # For cluster, join address:port with ',': "http://ip1:9200,ip2:9200,ip3:9200"
+  uri = "http://192.168.3.4:9200"
+```
+
+## Enable, Status. Start the Cortex
+```
+sudo systemctl enable cortex
+sudo systemctl start cortex 
+sudo systemctl status cortex
+```
+
+ #### Chack cortex ui dashboard in browser 
+
+http://192.168.3.4:9001/.
+
+- And update an dashboard 
+
+Loging : admin
+User name : admin
+Password : admin
+
+- Cortex manually setup complete 
+
+Thank you for Trying
+Welcome the next Part
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
