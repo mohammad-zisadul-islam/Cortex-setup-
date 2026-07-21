@@ -141,15 +141,6 @@ sudo systemctl daemon-reexec
 sudo systemctl restart elasticsearch
 ```
 
-## Verify installation Chack status 
-```
-curl -k -u elastic:192.168.4.5 https://localhost:9200
-```
-Or
-```
-curl http://192.168.3.1:9200
-
-```
 - Status
 ```
 {
@@ -171,7 +162,15 @@ curl http://192.168.3.1:9200
 }
 ```
 
+## Verify installation Chack status 
+```
+curl -k -u elastic:192.168.4.5 https://localhost:9200
+```
+Or
+```
+curl http://192.168.3.1:9200
 
+```
 
 
 
