@@ -129,6 +129,7 @@ thread_pool.search.queue_size: 100000
 ```
 
 
+
 *Than Save and exit. Ctrl+x, enter y, enter*
 
 ### Cortex enable,start and status all is ok 
