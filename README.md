@@ -1,6 +1,6 @@
 # Overview
 
-## This guide walks through the manual installation of the ELK Stack (Elasticsearch, Logstash, Kibana) and Cortex on Ubuntu 24.04.4 LTS. Cortex is an open-source Observable Analysis and Active Response engine, widely used in SOC environments alongside TheHive for automating IOC (Indicator of Compromise) analysis. The ELK Stack provides centralized log collection, parsing, storage, and visualization — forming the backbone of many SIEM setups.
+# *This guide walks through the manual installation of the ELK Stack (Elasticsearch, Logstash, Kibana) and Cortex on Ubuntu 24.04.4 LTS. Cortex is an open-source Observable Analysis and Active Response engine, widely used in SOC environments alongside TheHive for automating IOC (Indicator of Compromise) analysis. The ELK Stack provides centralized log collection, parsing, storage, and visualization — forming the backbone of many SIEM setups.*
 
 ## Cortex & ELK Stack (Elasticsearch, Logstash, Kibana) Setup on Ubuntu 24.04.4
 - Last Update Date: April 23, 2026
